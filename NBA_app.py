@@ -61,9 +61,9 @@ playerlist = [player1, player2, player3, player4, player5]
 
 with st.spinner('Predicting...'):
 
-    if(player1 != '1980-Present NBA Players' and player2 != '1980-Present NBA Players' and player3 != '1980-Present NBA Players' and player4 != '1980-Present NBA Players' and player5 != '1980-Present NBA Players'):
+#     if(player1 != '1980-Present NBA Players' and player2 != '1980-Present NBA Players' and player3 != '1980-Present NBA Players' and player4 != '1980-Present NBA Players' and player5 != '1980-Present NBA Players'):
 
-    # if(player1 != '2020 NBA Players' and player2 != '2020 NBA Players' and player3 != '2020 NBA Players' and player4 != '2020 NBA Players' and player5 != '2020 NBA Players'): #current
+    if(player1 != '2020 NBA Players' and player2 != '2020 NBA Players' and player3 != '2020 NBA Players' and player4 != '2020 NBA Players' and player5 != '2020 NBA Players'): #current
     # if(len(playerlist) > 4 and len(playerlist) < 6):
         userdf = pd.DataFrame(playerlist)
         userdf['Player'] = userdf[0]
