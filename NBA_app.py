@@ -26,8 +26,8 @@ from collections import deque
 st.title('NBA Lineup Machine')
 st.markdown('_Please see left sidebar for more details._')
 
-currentStats = pd.read_csv('https://raw.githubusercontent.com/neelganta/neel_project/master/alltimeDynasty.csv') #Dynasty
-# currentStats = pd.read_csv('https://raw.githubusercontent.com/neelganta/neel_project/master/updated2020.csv') #Current
+# currentStats = pd.read_csv('https://raw.githubusercontent.com/neelganta/neel_project/master/alltimeDynasty.csv') #Dynasty
+currentStats = pd.read_csv('https://raw.githubusercontent.com/neelganta/neel_project/master/updated2020.csv') #Current
 regModel = pd.read_csv('https://raw.githubusercontent.com/neelganta/neel_project/master/githubRegression.csv')
 regModel = regModel.fillna(0)
 # regModel = regModel.drop(columns=['Unnamed: 0'])
@@ -59,12 +59,12 @@ playerlist = [player1, player2, player3, player4, player5]
 # playerlist = st.multiselect("Select 5 players for your lineup: ", players)
 
 
-with st.spinner('Predicting...'):
 
+with st.spinner('Loading...'):
 #     if(player1 != '1980-Present NBA Players' and player2 != '1980-Present NBA Players' and player3 != '1980-Present NBA Players' and player4 != '1980-Present NBA Players' and player5 != '1980-Present NBA Players'):
 
     if(player1 != '2020 NBA Players' and player2 != '2020 NBA Players' and player3 != '2020 NBA Players' and player4 != '2020 NBA Players' and player5 != '2020 NBA Players'): #current
-    # if(len(playerlist) > 4 and len(playerlist) < 6):
+    # if(len(playerlist) > 4 and len(playerlist) < 6): 
         userdf = pd.DataFrame(playerlist)
         userdf['Player'] = userdf[0]
 
@@ -89,9 +89,8 @@ with st.spinner('Predicting...'):
 
         st.write('Lineup DataFrame:')
         st.write(new_df)
-        st.write('           ')
-        st.write('           ')
-        st.write('           ')
+
+
         import itertools
         x = []
         average = []
@@ -125,19 +124,26 @@ with st.spinner('Predicting...'):
             average.append(num)
 
 
-        avg = sum(average) / len(average)
+        
+        if st.button('PREDICT'):
 
-        string = str(round(avg, 2))
+                # with st.spinner('Predicting...'):
+                #     import time 
+                #     time.sleep(3)
 
+                    avg = sum(average) / len(average)
 
+                    string = str(round(avg, 2))
 
-        if(avg < 0):
-            st.error("The predicted Net Rating for this lineup is " + string +".")
-        elif (avg > 10): 
-            st.success("The predicted Net Rating for this lineup is " + string +".")
-        else:
-            st.warning("The predicted Net Rating for this lineup is " + string +".")
-
+                    if(avg < 0):
+                        st.error("The predicted Net Rating for this lineup is " + string +".")
+                    elif (avg > 10 and avg < 20): 
+                        st.success("The predicted Net Rating for this lineup is " + string +".")
+                    elif (avg > 20):
+                        st.success("The predicted Net Rating for this lineup is " + string +".")
+                        st.balloons()
+                    else:
+                        st.warning("The predicted Net Rating for this lineup is " + string +".")
 
 # st.markdown('_Currently the best lineup in the NBA (by at least 100 minutes played) is Paul/Gallinari/Schroder/Adams/Gilgeous-Alexander of the OKC Thunder. The NBA Net Rating Machine predicts this lineup with a Net Rating of 16.7. The bar has been set, can you beat it?_')
 st.markdown('_Presented by Neel Ganta._')
