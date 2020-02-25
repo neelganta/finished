@@ -174,7 +174,7 @@ if(player1 != '2020 NBA Players' and player2 != '2020 NBA Players' and player3 !
 
 
 
-
+st.video(data = 'https://www.youtube.com/watch?v=QrmqLajdJkA&feature=youtu.be')
 # st.markdown('_Currently the best lineup in the NBA (by at least 100 minutes played) is Paul/Gallinari/Schroder/Adams/Gilgeous-Alexander of the OKC Thunder. The NBA Net Rating Machine predicts this lineup with a Net Rating of 16.7. The bar has been set, can you beat it?_')
 st.markdown('_Presented by Neel Ganta._')
 # st.sidebar.markdown()
