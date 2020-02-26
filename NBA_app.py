@@ -174,18 +174,18 @@ if(player1 != '2020 NBA Players' and player2 != '2020 NBA Players' and player3 !
 
 
 
-st.video(data = 'https://www.youtube.com/watch?v=QrmqLajdJkA&feature=youtu.be')
+st.video(data = 'https://www.youtube.com/watch?v=le3cMnQ7_74&feature=youtu.be')
 # st.markdown('_Currently the best lineup in the NBA (by at least 100 minutes played) is Paul/Gallinari/Schroder/Adams/Gilgeous-Alexander of the OKC Thunder. The NBA Net Rating Machine predicts this lineup with a Net Rating of 16.7. The bar has been set, can you beat it?_')
 st.markdown('_Presented by Neel Ganta._')
 # st.sidebar.markdown()
 
-st.sidebar.image('https://i.imgur.com/PAPFDxX.jpg',use_column_width=True)
+st.sidebar.video(data = 'https://www.youtube.com/watch?v=le3cMnQ7_74&feature=youtu.be)
 st.sidebar.markdown('**ABOUT THE NBA LINEUP MACHINE:**  The _NBA Lineup Machine_ was first incepted roughly one year ago while Neel Ganta was pondering the current lineup problem in the NBA. Should teams go small? Three shooters? Five? How can we see what our team would look like with a player _before_ trading for him? Seeing a problem and no publicly available solution, Neel decided to create what could be the next big GM tool. Please enjoy the _NBA Lineup Machine_ which allows you to input **any** five players in the NBA, and utilizes a machine learning algorithm to predict an overall Net Rating for the lineup.')
 
 # st.sidebar.markdown('**ABOUT THE ALL-TIME NBA LINEUP MACHINE:**  After creating the _[NBA Lineup Machine](https://nba-lineup-machine.herokuapp.com)_, which allows the user to predict the Net Rating of any lineup possible in the current NBA, Neel Ganta went about to answer a different set of questions. The endless debates of who would really make the best lineup of all time can finally put to rest. The _All-Time NBA Lineup Machine_ contains data for _every_ player since the three-point line was introduced in 1980. What if we swapped ‘85 Larry Bird for Paul Pierce on the ‘08 Celtics? What if we made a lineup of the best big men ever? What would a lineup with Kobe, MJ, and Lebron look like? Can _you_ create the best lineup ever? Please enjoy the _All-Time NBA Lineup Machine_ which allows you to input **any** five players in the past **40 years** of the NBA, and predicts an overall Net Rating in modern terms for the lineup.')
 st.sidebar.markdown('_**Poor: ** Net Rating **< 0** | **Average:** Net Rating **> 0** | **Good:** Net Rating **> 5** | **Excellent:** Net Rating **> 10** | **Hall of Fame:** Net Rating **> 20**_')
 st.sidebar.markdown('_Interested in an All-Time NBA Lineup Machine? Try the [All-Time NBA Lineup Machine](https://all-time-nba-lineup-machine.herokuapp.com) which contains data for **every** player since the three-point line was introduced in 1980. The endless debates of who would really make the best lineup of all time can finally be put to rest. The only question is, can **you** make the greatest lineup of all time?_')
-st.sidebar.video(data = 'https://www.youtube.com/watch?v=QrmqLajdJkA&feature=youtu.be')
+
 st.sidebar.markdown('**ABOUT NEEL GANTA**: Neel Ganta is graduating with a Finance and Computer Science degree from Kansas State, and completed internships at the Federal Reserve, JPMorgan Chase, the **Boston Celtics**. Neel currently serves as an analytics consultant for **Brad Underwood, Head Basketball Coach at the University of Illinois.** Neel grew up using his passion for basketball to connect with others, and can be found playing 5 on 5 in his local city league tournament or rec center. When he is taking a break from practicing dunks and _NBA_ three pointers, he is sharpening his machine learning skills and seeking new avenues to provide basketball insights.')
 # st.sidebar.video('https://youtu.be/-OoM5XvLo20')
 st.sidebar.markdown('**The Neel Ganta Fighting Illini Story:**')
